@@ -7,8 +7,8 @@ namespace Say_Hello.Controllers;
 public class GreetingController : ControllerBase
 {
     [HttpGet]
-    [Route("GetInput/{userName}")]
-    public string GetHello(string userName) {
+    [Route("GetName/{userName}")]
+    public string GetName(string userName) {
         return "Hello, " + userName + ".";
     }
 }
