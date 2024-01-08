@@ -1,10 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 
 namespace Say_Hello.Controllers;
-public class GreetingController
+
+[ApiController]
+[Route("[controller]")]
+public class GreetingController : ControllerBase
 {
-    public GreetingController() 
-    {
-        
-    }        
+    [HttpGet]
+    [Route("GetInput/{userName}")]
+    public string GetHello(string userName) {
+        return "Hello, " + userName + ".";
+    }
 }
